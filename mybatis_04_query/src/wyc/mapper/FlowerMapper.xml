@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- namesapce:理解成实现类的全路径(包名+类名) -->
+<mapper namespace="a.b" >
+
+	<!-- 
+		id:方法名
+		parameterType:定义参数类型
+		resultType:返回值类型.
+		如果方法返回值是list,在resultType中写List的泛型
+		mybatis对jdbc封装，是一行一行读取数据
+	-->
+	
+	<!-- 可以使用别名（别名对应pojo的属性名） -->
+	<select id="selAll" resultType="wyc.pojo.Flower">
+		select id, name name123, price, production from flower
+	</select>
+	
+	<select id="selById" resultType="int">
+		select count(*) from flower
+	</select>
+	
+	<!-- 想要返回map类型，可以这样： 				-->
+	<!-- session.selectMap("a.b.c", "name123"); -->
+	<!-- 表示返回一个map，表map的key值为name123属性	-->
+	<select id="c" resultType="wyc.pojo.Flower">
+		select id, name name123, price, production from flower
+	</select>
+	
+</mapper>
