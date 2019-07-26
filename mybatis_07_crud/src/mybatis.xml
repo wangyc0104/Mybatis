@@ -7,7 +7,7 @@
 		<setting name="logImpl" value="LOG4J"/>
 	</settings>
 	<typeAliases>
-		<package name="wyc.pojo" />
+		<package name="wyc.pojo"/>
 	</typeAliases>
 	<!-- default引用environment的id,当前所使用的环境 -->
 	<environments default="default">

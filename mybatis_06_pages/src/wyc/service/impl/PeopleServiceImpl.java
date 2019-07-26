@@ -36,7 +36,7 @@ public class PeopleServiceImpl implements PeopleService {
 		
 		// 查询所有数据的总条数，然后基于此计算页码
 		long count = session.selectOne("wyc.mapper.PeopleMapper.selCount");
-		pi.setTotal(count % pageSize == 0 ? count / pageSize : count / pageSize + 1);
+		pi.setTotal(count % pageSize == 0 ? count/ pageSize : count/ pageSize + 1);
 		
 		return pi;
 	}

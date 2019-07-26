@@ -98,7 +98,7 @@
 	</insert>
 	
 	<select id="testMysql">
-		select <include refid="mysql" /> from log
+		select <include refid="mysql"/> from log
 	</select>
 	
 	<sql id="mysql">

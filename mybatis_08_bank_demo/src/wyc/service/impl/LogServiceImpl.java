@@ -37,7 +37,7 @@ public class LogServiceImpl implements LogService {
 		pi.setList(list);
 		pi.setPageNumber(pageNumber);
 		pi.setPageSize(pageSize);
-		pi.setTotal(count % pageSize == 0 ? count / pageSize : count / pageSize + 1);
+		pi.setTotal(count % pageSize == 0 ? count/ pageSize : count/ pageSize + 1);
 		return pi;
 	}
 
